@@ -57,7 +57,7 @@ btn.addEventListener('click', ()=>{
 
 function takeCommand(message){
     if(message.includes('hey ') || message.includes('hello')){
-        speak("Hello Sir , ( i am virtual assistant ,created by ('<Prince Sir>')), How May I Help You Today?");
+        speak("Hello Sir , ( i am virtual assistant ,created by Prince Sir, How May I Help You Today?");
     } 
   
     else if(message.includes("open google")){
@@ -109,5 +109,13 @@ function takeCommand(message){
         const finalText = "I found some information for " + message + " on google";
         speak(finalText); 
         
-    }
+    } 
+	
+  // battery
+  let batteryPromise = navigator.getBattery();
+  batteryPromise.then(batteryCallback);
+ // this is what friday tells about weather
+let weatherStatement = "";
+let charge,chargeStatus, connectivity, currentTime
+chargeStatus = "unplugged"
 }
